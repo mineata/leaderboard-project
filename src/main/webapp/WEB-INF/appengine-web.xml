@@ -3,5 +3,6 @@
     <application>app_id</application>
     <version>3</version>
     <threadsafe>true</threadsafe>
+    <use-google-connector-j>true</use-google-connector-j>
     <runtime>java8</runtime>
 </appengine-web-app>
