@@ -11,7 +11,7 @@
       <user-name>root</user-name>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
-    <data-source name="gamescore@34.67.34.128" uuid="f2387221-ff6f-4f8c-a13d-f338d0f37c09">
+    <data-source name="jdbc:mysql://gamescore-goodjob:us-central1:3307/gamescore" uuid="f2387221-ff6f-4f8c-a13d-f338d0f37c09">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>

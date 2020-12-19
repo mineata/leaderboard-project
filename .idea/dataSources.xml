@@ -15,11 +15,11 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="gamescore@34.67.34.128" uuid="f2387221-ff6f-4f8c-a13d-f338d0f37c09">
+    <data-source source="LOCAL" name="jdbc:mysql://gamescore-goodjob:us-central1:3307/gamescore" uuid="f2387221-ff6f-4f8c-a13d-f338d0f37c09">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://34.67.34.128:3307/gamescore</jdbc-url>
+      <jdbc-url>jdbc:mysql://gamescore-goodjob:us-central1:3307/gamescore</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />
