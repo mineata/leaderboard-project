@@ -13,10 +13,10 @@ handlers:
 manual_scaling:
   instances: 1
 
-#  unix  domain socket
-beta_settings:
-  cloud_sql_instances: gamescore-goodjob:us-central1:gamescore
-
-# tcp port
+##  unix  domain socket
 #beta_settings:
-#  cloud_sql_instances: gamescore-goodjob:us-central1:gamescore=tcp:3307
+#  cloud_sql_instances: gamescore-goodjob:us-central1:gamescore
+
+## tcp port
+beta_settings:
+  cloud_sql_instances: gamescore-goodjob:us-central1:gamescore=tcp:3307
