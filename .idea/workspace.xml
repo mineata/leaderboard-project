@@ -6,20 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c66b4e49-90d8-4a1d-ba37-c225327817f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/appengine/app.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamescore/ConnectionPoolContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gamescore/cloudsql/ConnectionPoolContextListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamescore/GameScoreApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamescore/ServletInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamescore/config/SwaggerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamescore/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamescore/model/Score.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamescore/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamescore/repository/UserRepository$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamescore/repository/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/gamescore/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-gcp.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-mysql.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -50,20 +40,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="182" column="40" lean-forward="true" selection-start-line="182" selection-start-column="40" selection-end-line="182" selection-end-column="40" />
+            <state relative-caret-position="255">
+              <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application-mysql.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application-gcp.properties">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+            <state relative-caret-position="136">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -72,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -101,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gamescore/cloudsql/ConnectionPoolContextListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
-              <caret line="90" column="56" selection-start-line="90" selection-start-column="56" selection-end-line="90" selection-end-column="56" />
+            <state relative-caret-position="351">
+              <caret line="119" column="9" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -132,7 +131,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/MainApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/schema.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamescore/config/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamescore/config/RedisConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamescore/model/User.java" />
@@ -140,7 +138,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gamescore/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamescore/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/appengine.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-mysql.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/application-gcp.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-cloud-bootstrap.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamescore/config/CustomHikariConfig.java" />
@@ -148,12 +145,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gamescore/ServletInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamescore/GameScoreApplication.java" />
         <option value="$PROJECT_DIR$/src/main/appengine/app.yaml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamescore/ConnectionPoolContextListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamescore/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/schema.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/gamescore/cloudsql/ConnectionPoolContextListener.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-mysql.properties" />
       </list>
     </option>
   </component>
@@ -166,6 +165,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-123" />
+    <option name="y" value="-8" />
     <option name="width" value="1943" />
     <option name="height" value="1320" />
   </component>
@@ -242,14 +242,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="gamescore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gamescore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -265,7 +257,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1608453919867" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1608458447124" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -329,12 +321,12 @@
       <workItem from="1608365018498" duration="8427000" />
       <workItem from="1608379763115" duration="20281000" />
       <workItem from="1608452578729" duration="1383000" />
-      <workItem from="1608454084262" duration="864000" />
+      <workItem from="1608454084262" duration="3267000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87112000" />
+    <option name="totallyTimeSpent" value="89515000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -367,7 +359,7 @@
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.42917848" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.12181303" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.16430596" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
@@ -527,13 +519,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamescore/config/DatabaseConfig.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamescore/ServletInitializer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamescore/GameScoreApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -547,13 +532,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/appengine/app.yaml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-gcp.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -571,27 +549,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gamescore/cloudsql/ConnectionPoolContextListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="90" column="56" selection-start-line="90" selection-start-column="56" selection-end-line="90" selection-end-column="56" />
+        <state relative-caret-position="351">
+          <caret line="119" column="9" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        <state relative-caret-position="255">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-mysql.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="182" column="40" lean-forward="true" selection-start-line="182" selection-start-column="40" selection-end-line="182" selection-end-column="40" />
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
