@@ -1,3 +1,5 @@
+service: default
+
 runtime: java
 env: flex
 
@@ -28,19 +30,15 @@ vpc_access_connector:
 
 resources:
   cpu: 1
-  memory_gb: 2.3
+  memory_gb: 2.3 #0.5
   disk_size_gb: 10
   volumes:
     - name: ramdisk1
       volume_type: tmpfs
       size_gb: 0.5
 
-#health_check:
-#  enable_health_check: True
-#  check_interval_sec: 5
-#  timeout_sec: 4
-#  unhealthy_threshold: 2
-#  healthy_threshold: 2
+health_check:
+  enable_health_check: False
 
 ### tcp port
 #beta_settings:
