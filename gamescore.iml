@@ -4,5 +4,11 @@
     <facet type="google-app-engine" name="Google App Engine">
       <configuration />
     </facet>
+    <facet type="app-engine-flexible" name="Google App Engine Flexible">
+      <configuration>
+        <option name="appYamlPath" value="C:\Users\Dell\Documents\gamescore\src\main\appengine\app.yaml" />
+        <option name="dockerDirectory" value="C:\Users\Dell\Documents\gamescore\src\main\docker" />
+      </configuration>
+    </facet>
   </component>
 </module>
