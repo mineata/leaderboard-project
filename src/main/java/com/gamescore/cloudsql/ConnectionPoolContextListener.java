@@ -1,4 +1,4 @@
-package com.gamescore;
+package com.gamescore.cloudsql;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
