@@ -37,8 +37,6 @@ resources:
       volume_type: tmpfs
       size_gb: 0.5
 
-health_check:
-  enable_health_check: False
 
 ### tcp port
 #beta_settings:
