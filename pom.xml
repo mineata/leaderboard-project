@@ -155,7 +155,7 @@
                 <version>2.2.0</version>
                 <configuration>
                     <projectId>gamescore-goodjob</projectId>
-                    <version>1</version>
+                    <version>GCLOUD_CONFIG</version>
                 </configuration>
             </plugin>
         </plugins>
