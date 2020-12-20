@@ -26,6 +26,22 @@ network:
 vpc_access_connector:
   name: 'projects/gamescore-goodjob/locations/us-central1/redis-vpc-connector'
 
+resources:
+  cpu: 1
+  memory_gb: 2.3
+  disk_size_gb: 10
+  volumes:
+    - name: ramdisk1
+      volume_type: tmpfs
+      size_gb: 0.5
+
+#health_check:
+#  enable_health_check: True
+#  check_interval_sec: 5
+#  timeout_sec: 4
+#  unhealthy_threshold: 2
+#  healthy_threshold: 2
+
 ### tcp port
 #beta_settings:
 #  cloud_sql_instances: gamescore-goodjob:us-central1:gamescore=tcp:3307
