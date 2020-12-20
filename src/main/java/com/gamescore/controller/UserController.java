@@ -53,13 +53,23 @@ public class UserController {
 
     @PostMapping(value="/user/create")
     private ResponseEntity<User> addUser(@RequestBody User user){
-        userService.addUser(user);
-        return new ResponseEntity<>(user, HttpStatus.OK);
+        boolean executed = userService.addUser(user);
+        if(executed) {
+            return new ResponseEntity<>(user, HttpStatus.OK);
+        }
+        else{
+            return new ResponseEntity<>((User) null, HttpStatus.BAD_REQUEST);
+        }
     }
 
     @PostMapping(value = "/score/submit")
     private ResponseEntity<Score> submitScore(@RequestBody Score score) {
-        userService.submitScore(score);
-        return new ResponseEntity<>(score, HttpStatus.OK);
+        boolean executed = userService.submitScore(score);
+        if(executed){
+            return new ResponseEntity<>(score, HttpStatus.OK);
+        }
+        else{
+            return new ResponseEntity<>((Score) null, HttpStatus.BAD_REQUEST);
+        }
     }
 }

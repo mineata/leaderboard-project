@@ -106,19 +106,31 @@ public class UserService {
     return user;
   }
 
-  public void addUser(User user) {
+  public boolean addUser(User user) {
+      try{
+          userRepository.addUser(user);
+      }
+      catch(Exception e){
+          return false;
+      }
     String id =  user.getUser_id().toString();
     redisTemplate.opsForZSet().add(SET_KEY,id, user.getPoints());
     redisTemplate.opsForHash().put(HASH_KEY, id, user);
     user.setRank(redisTemplate.opsForZSet().reverseRank(SET_KEY,id) +1);
-    userRepository.addUser(user);
+    return true;
   }
 
-  public void submitScore (Score score) {
+  public boolean submitScore (Score score) {
+    try{
+        userRepository.submitScore(score);
+    }
+    catch (Exception e){
+        return false;
+    }
     redisTemplate.opsForZSet().incrementScore(SET_KEY, score.getUser_id().toString(), score.getScore_worth());
     redisTemplate.opsForHash().delete(HASH_KEY, score.getUser_id().toString());
+    return true;
 
-    userRepository.submitScore(score);
   }
 
 
