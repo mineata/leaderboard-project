@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/gamescore/service/UserService.java" description="    redisTemplate.opsForZSet().add(SET_KEY, user.g..." line="110" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66b4e49-90d8-4a1d-ba37-c225327817f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamescore/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gamescore/config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="c66b4e49-90d8-4a1d-ba37-c225327817f9" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,7 +73,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="-133">
               <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
             </state>
           </provider>
@@ -182,7 +179,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-123" />
     <option name="y" value="-8" />
     <option name="width" value="1943" />
@@ -267,7 +264,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1608466636777" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1608467283129" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -334,12 +331,12 @@
       <workItem from="1608365018498" duration="8427000" />
       <workItem from="1608379763115" duration="20281000" />
       <workItem from="1608452578729" duration="1383000" />
-      <workItem from="1608454084262" duration="8899000" />
+      <workItem from="1608454084262" duration="9493000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95147000" />
+    <option name="totallyTimeSpent" value="95741000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -596,7 +593,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="-133">
           <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
         </state>
       </provider>
