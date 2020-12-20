@@ -5,6 +5,8 @@ runtime_config:
   jdk: openjdk8
 env_variables:
   SPRING_PROFILES_ACTIVE: "gcp,mysql"
+  REDISHOST: '10.161.193.139'
+  REDISPORT: '6379'
 
 handlers:
   - url: /.*
@@ -16,6 +18,13 @@ manual_scaling:
 ##  unix  domain socket
 beta_settings:
   cloud_sql_instances: gamescore-goodjob:us-central1:gamescore
+
+## Update with Redis instance network name
+network:
+  name: default
+
+vpc_access_connector:
+  name: 'projects/gamescore-goodjob/locations/us-central1/redis-vpc-connector'
 
 ### tcp port
 #beta_settings:
