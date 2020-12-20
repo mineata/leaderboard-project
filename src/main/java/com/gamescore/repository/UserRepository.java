@@ -23,13 +23,13 @@ import java.util.UUID;
 @Repository
 public class UserRepository extends JdbcDaoSupport {
 
-//    @Autowired
-//    DataSource dataSource;
-//
-//    @PostConstruct
-//    private void initiliaze(){
-//        setDataSource(dataSource);
-//    }
+    @Autowired
+    DataSource dataSource;
+
+    @PostConstruct
+    private void initiliaze(){
+        setDataSource(dataSource);
+    }
 
     Long count = Long.valueOf(1);
 
