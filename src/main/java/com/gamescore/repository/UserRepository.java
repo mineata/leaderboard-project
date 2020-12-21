@@ -3,6 +3,7 @@ package com.gamescore.repository;
 import com.gamescore.model.Score;
 import com.gamescore.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Repository;
@@ -11,6 +12,7 @@ import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
@@ -102,6 +104,30 @@ public class UserRepository extends JdbcDaoSupport {
         count +=1;
     }
 
+    public void addAllUsers(List<User> users){
+        String sql = "INSERT INTO users " + "(user_id, display_name, points, rank, country) VALUES (?,?,?,?, ?)";
+        Float points = Float.valueOf(0);
+
+        getJdbcTemplate().batchUpdate(sql, new BatchPreparedStatementSetter() {
+            @Override
+            public void setValues(PreparedStatement ps, int i) throws SQLException {
+                User user = users.get(i);
+                byte[] uuidBytes = getBytesFromUUID(user.getUser_id());
+                ps.setBytes(1, uuidBytes);
+                ps.setString(2, user.getDisplay_name());
+                ps.setFloat(3, points);
+                ps.setLong(4, user.getRank());
+                ps.setString(5,user.getCountry());
+
+            }
+
+            @Override
+            public int getBatchSize() {
+                return users.size();
+            }
+        });
+    }
+
     public void submitScore(Score score) {
         User user = getUserById(score.getUser_id());
         String sql ="UPDATE users SET points =? WHERE user_id =?";
@@ -112,6 +138,30 @@ public class UserRepository extends JdbcDaoSupport {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         score.setTimestamp(timestamp.getTime());
         getJdbcTemplate().update(sql, newPoint, bytes_id );
+    }
+
+    public void submitAllScores(List<Score> scores){
+        String sql ="UPDATE users SET points =? WHERE user_id =?";
+
+        getJdbcTemplate().batchUpdate(sql, new BatchPreparedStatementSetter() {
+            @Override
+            public void setValues(PreparedStatement ps, int i) throws SQLException {
+                Score score = scores.get(i);
+                User user = getUserById(score.getUser_id());
+                Float newPoint = user.getPoints() + score.getScore_worth();
+                byte [] bytes_id = getBytesFromUUID(score.getUser_id());
+                Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+                score.setTimestamp(timestamp.getTime());
+
+                ps.setFloat(1,newPoint);
+                ps.setBytes(2, bytes_id);
+            }
+
+            @Override
+            public int getBatchSize() {
+                return scores.size();
+            }
+        });
     }
 
 

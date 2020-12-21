@@ -1,3 +1,6 @@
+##############
+## Used if app is deployed in App Engine Flexible Environment
+##############
 service: default
 
 runtime: java

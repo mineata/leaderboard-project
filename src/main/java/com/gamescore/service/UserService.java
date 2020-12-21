@@ -29,14 +29,13 @@ public class UserService {
 
 
   public void updateRedis() {
-      boolean hash_found = false;
 
       redisTemplate.opsForZSet().removeRange(SET_KEY, 0, -1);
       List<User> users = userRepository.getAllUsers();
       for (User user: users) {
           String id = user.getUser_id().toString();
-          hash_found = redisTemplate.opsForHash().hasKey(HASH_KEY, id);
-          if (hash_found == false){redisTemplate.opsForHash().put(HASH_KEY, id, user);}
+          redisTemplate.opsForHash().delete(HASH_KEY, id);
+          redisTemplate.opsForHash().put(HASH_KEY, id, user);
           redisTemplate.opsForZSet().add(SET_KEY, id, new Float(user.getPoints()));
       }
   }
@@ -120,6 +119,23 @@ public class UserService {
     return true;
   }
 
+  public boolean addAllUsers(List<User> users) {
+      try{
+          userRepository.addAllUsers(users);
+      }
+      catch(Exception e){
+          return false;
+      }
+      for (User user: users){
+          String id =  user.getUser_id().toString();
+          user.setPoints(Float.valueOf(0));
+          redisTemplate.opsForZSet().add(SET_KEY,id, user.getPoints());
+          redisTemplate.opsForHash().put(HASH_KEY, id, user);
+          user.setRank(redisTemplate.opsForZSet().reverseRank(SET_KEY,id) +1);
+      }
+      return true;
+  }
+
   public boolean submitScore (Score score) {
     try{
         userRepository.submitScore(score);
@@ -133,5 +149,19 @@ public class UserService {
 
   }
 
+  public boolean submitAllScores(List<Score> scores){
+      try{
+          userRepository.submitAllScores(scores);
+      }
+      catch (Exception e){
+          return false;
+      }
+
+      for(Score score:scores){
+          redisTemplate.opsForZSet().incrementScore(SET_KEY, score.getUser_id().toString(), score.getScore_worth());
+          redisTemplate.opsForHash().delete(HASH_KEY, score.getUser_id().toString());
+      }
+      return true;
+  }
 
 }

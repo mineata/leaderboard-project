@@ -62,6 +62,17 @@ public class UserController {
         }
     }
 
+    @PostMapping(value="/user/create-all")
+    private ResponseEntity<List<User>> addUser(@RequestBody List<User> users){
+        boolean executed = userService.addAllUsers(users);
+        if(executed) {
+            return new ResponseEntity<>(users, HttpStatus.OK);
+        }
+        else{
+            return new ResponseEntity<>((List<User>) null, HttpStatus.BAD_REQUEST);
+        }
+    }
+
     @PostMapping(value = "/score/submit")
     private ResponseEntity<Score> submitScore(@RequestBody Score score) {
         boolean executed = userService.submitScore(score);
@@ -70,6 +81,17 @@ public class UserController {
         }
         else{
             return new ResponseEntity<>((Score) null, HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PostMapping(value = "/score/submit-all")
+    private ResponseEntity<List<Score>> submitScore(@RequestBody List<Score> scores) {
+        boolean executed = userService.submitAllScores(scores);
+        if(executed){
+            return new ResponseEntity<>(scores, HttpStatus.OK);
+        }
+        else{
+            return new ResponseEntity<>((List<Score>) null, HttpStatus.BAD_REQUEST);
         }
     }
 }
