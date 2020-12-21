@@ -38,7 +38,7 @@ sudo service redis-server stop
 sudo apt install mysql-server
 ```
 
-#### Run the application
+### Run the application
 
 Go to directory of the project and run
 ```bash
