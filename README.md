@@ -44,3 +44,7 @@ Go to directory of the project and run
 ```bash
 mvn spring-boot:run
 ```
+
+### Swagger UI
+
+Go to url:http://34.72.148.39:8090/swagger-ui.html#
