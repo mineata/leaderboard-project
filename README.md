@@ -1,4 +1,4 @@
-Leaderboard Project - GoodJobGames
+Leaderboard Project 
 ===================================
 
 ### Technologies/Tools Used
